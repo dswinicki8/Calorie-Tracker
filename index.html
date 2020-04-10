@@ -86,7 +86,7 @@
         </div>
         <div class="card mt-5" style="width: 60rem;">
             <div class="card-body">
-                <h4 class="card-title">Daily Meal Logger:</h4>
+                <h4 class="card-title">Food Search:</h4>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Breakfast</a>
                     <a class="dropdown-item active" href="#">Lunch</a>
@@ -98,14 +98,42 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon3">Food:</span>
                     </div>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <input type="text" class="form-control" id="foodSearch" aria-describedby="basic-addon3">
                 </div>
-                <button type="button" class="btn btn-success">Log</button>
+                <button type="button" class="btn btn-success" id="searchBtn">Search</button>
             </div>
+
+            <div class="foodOptions">
+                <ul class="list-group list-group-flush">
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn0">Add</button>
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn1">Add</button>
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn2">Add</button>
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn3">Add</button>
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn4">Add</button>
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn5">Add</button>
+                    <button type="button" class="btn btn-success hide foodOption" id="foodBtn6">Add</button>
+                    
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="foodLog">
+            <table class="table foodTable">
+                <thead>
+                  <tr>
+                    <th scope="col">Food</th>
+                    <th scope="col">Calories</th>
+                  </tr>
+                </thead>
+                <tbody class="foodTableBody">
+                  
+                </tbody>
+              </table>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
     <script src="script.js"></script>
