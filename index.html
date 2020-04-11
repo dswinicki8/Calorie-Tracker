@@ -12,23 +12,22 @@
 </head>
 
 <body>
+
     <div class="container-fluid">
 
 
-
-        <div class="row mt-5">
+        <div class="row mt-5" id="header">
             <div class="col-8">
-                <div class="card" style="width: 60rem; height: 12rem;">
+                <div class="card" style="width: 40rem; height: 12rem;">
                     <div class="card-body">
                         <h2 class="card-title">Calorie Tracker</h2>
-
                         <p class="card-text">An app that makes the daily chore of logging calories and excercise easier!
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-4">
-                <v class="card" style="width: 30rem; height: 12rem;">
+                <div class="card" style="width: 25rem; height: 12rem;">
                     <div class="card-body">
                         <h4 class="card-title">User Info:</h4>
                         <div class="input-group mb-3">
@@ -44,18 +43,18 @@
                             <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                         </div>
                     </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="container-fluid">
-
-
-            <div class="row">
-                <div class=col-6>
-                    <div class="row">
-                        <div class="card mt-5" style="width: 60rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Daily Meal Logger:</h4>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-6">
+                <div class="row">
+                    <div class="card mt-5" style="width: 60rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">Daily Meal Logger:</h4>
                                 <select class="form-control form-control-lg">
                                     <option>Breakfast</option>
                                     <option>Lunch</option>
@@ -63,142 +62,151 @@
                                     <option>Snack</option>
                                     <option>Water</option>
                                 </select>
-                            </div>
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputAddress">Meal Item:</label>
-                                    <input type="text" class="form-control" id="inputAddress"
-                                        placeholder="Pizza, Omlet, Steak, Ice Cream, etc.">
+                            <div class="input-group mt-5 mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">Food:</span>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="card mt-5" style="width: 25rem;">
-                                <div class="card-body">
-                                    <h4 class="card-title">Health Goals:</h4>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3">Intake:</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="basic-url"
-                                            aria-describedby="basic-addon3">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3">Burn:</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="basic-url"
-                                            aria-describedby="basic-addon3">
-                                    </div>
-                                    <button type="button" class="btn btn-success">Log</button>
-                                </div>
+                                <input type="text" class="form-control" id="foodSearch" aria-describedby="basic-addon3">
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card mt-5" style="width: 25rem;">
-                                <div class="card-body">
-                                    <h4 class="card-title">Daily Fitness Logger:</h4>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3">Excercise:</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="basic-url"
-                                            aria-describedby="basic-addon3">
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon3">Calories Burned:</span>
-                                        </div>
-                                        <input type="text" class="form-control" id="basic-url"
-                                            aria-describedby="basic-addon3">
-                                    </div>
-                                    <button type="button" class="btn btn-success">Log</button>
-                                </div>
-                            </div>
+                            <button type="button" class="btn btn-success" id="searchBtn">Search</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 mt-5">
+                <div class="row">
                     <div class="col-6">
-                        <div class="card" style="width: 50rem; height: 40rem;">
+                        <div class="card mt-5" style="width: 20rem;">
                             <div class="card-body">
-                                <h5 class="card-title">Search Results:</h5>
-                                    <ul id="search-results">
-                                    </ul>
+                                <h4 class="card-title">Daily Fitness Logger:</h4>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">Excercise:</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">Calories Burned:</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                                <button type="button" class="btn btn-success">Log</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mt-5" style="width: 20rem;">
+                            <div class="card-body">
+                                <h4 class="card-title">Health Goals:</h4>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">Intake::</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">Burn:</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="basic-url"
+                                        aria-describedby="basic-addon3">
+                                </div>
+                                <button type="button" class="btn btn-success">Log</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-            <div class="row mt-5">
-                <div class="col-3">
-                    <div class="card" style="width: 25rem;">
-                        <img src="Pictures /breakfast.jpg" class="card-img-top" height="300px" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Breakfast</h5>
+            <div class="col-6">
+                <div class="card" style="width: 50rem; height: 40rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Search Results:</h5>
+                        <div class="foodOptions">
+                            <ul class="list-group list-group-flush">
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn0">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn1">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn2">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn3">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn4">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn5">Add</button>
+                                <button type="button" class="btn btn-success hide mt-1 foodOption" id="foodBtn6">Add</button>
+                            </ul>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 25rem;">
-                        <img src="Pictures /lunch.jpg" class="card-img-top" height="300px" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Lunch</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 25rem;">
-                        <img src="Pictures /dinner.jpg" class="card-img-top" height="300px" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Dinner</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 25rem;">
-                        <img src="Pictures /snack.jpg" class="card-img-top" height="300px" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Snacks</h5>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
-        <script src="script.js"></script>
+
+    <div class="row mt-5">
+        <div class="col-3">
+            <div class="card" style="width: 25rem;">
+                <img src="Pictures /breakfast.jpg" class="card-img-top" height="300px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Breakfast</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 25rem;">
+                <img src="Pictures /lunch.jpg" class="card-img-top" height="300px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Lunch</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 25rem;">
+                <img src="Pictures /dinner.jpg" class="card-img-top" height="300px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dinner</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card" style="width: 25rem;">
+                <img src="Pictures /snack.jpg" class="card-img-top" height="300px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Snacks</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
